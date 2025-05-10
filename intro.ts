@@ -86,3 +86,60 @@ tUser = ['fds',123,true] // order matters
 
 
 // ENUMS
+enum SeatChoice {
+    Aisle = 'fsd',
+    Middle= 3,
+    Window,
+    Fourth
+}
+
+const hcSeat = SeatChoice.Aisle
+
+// Interface
+
+interface User2 {
+    readonly dbId: number,
+    email: string,
+    userId: number,
+    googleId?: string,
+    // startTrail: () => string
+    startTrail(): string,
+    getCoupon(couponname: string, value: number): number
+}
+
+interface User2 {
+    gitTokem?: string
+}
+
+interface Admin1 extends User2 {
+    role: "admin" | 'ta' | 'lengs'
+}
+
+const hot: Admin1 = {dbId: 423, email: "sdfs", userId: 423, role: 'admin',
+    startTrail: ()=> {
+        return 'dghkjsgsk'
+    },
+    getCoupon: (name: 'gsdds', value: 42342) => {
+        return 234
+    },
+    gitTokem: 'fsdfsd'
+}
+hot.email = 'fsdfsd'
+
+// Gererics
+
+const score1: Array<number> = []
+const names1: Array<string> = []
+
+function identityOne(val: boolean | number): boolean | number {
+    return val
+}
+function identityTwo(val: any): any {
+    return val
+}
+function identityThree<Type>(val: Type): Type {
+    return val
+}
+function identityFour<T>(val: T): T {
+    return val
+}
